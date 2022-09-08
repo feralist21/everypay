@@ -1,0 +1,41 @@
+.subscribe-form {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe-form__label {
+  width: 100%;
+  display: block;
+  font-size: 0;
+}
+
+.subscribe-form__input {
+  width: 100%;
+  display: block;
+  height: 48px;
+  padding: 12px 20px 12px 20px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.96px;
+  background: $light_bg;
+  color: $black_text;
+  border-radius: 44px;
+}
+
+.subscribe-form__input::placeholder {
+  color: $blue_input;
+  opacity: 0.4;
+}
+
+.subscribe-form__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}

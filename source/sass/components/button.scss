@@ -21,6 +21,10 @@
   padding: 13px 40px;
 }
 
+.button--subscribe {
+  padding: 12px 53px;
+}
+
 .button--callback {
   padding: 13px 28px;
 }
@@ -28,4 +32,10 @@
 .button--main:hover {
   box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
   @include transition(box-shadow);
+}
+
+@media (max-width: $sm) {
+  .button--subscribe {
+    padding: 12px 27px;
+  }
 }
