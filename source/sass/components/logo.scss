@@ -5,11 +5,12 @@
 .logo img {
   display: block;
   width: 131px;
-  height: auto;
+  height: 21px;
 }
 
 @media (max-width: $sm) {
   .logo img {
     width: 97px;
+    height: 16px;
   }
 }

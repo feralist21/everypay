@@ -12,7 +12,7 @@
         <div class="container">
           <div class="header-desktop__inner">
             <a class="logo" href="/">
-              <img src="./img/sprite.svg#logo" alt="Логотип" />
+              <img src="img/svg/logo.svg" alt="Логотип" />
             </a>
             <nav class="header-desktop__navigation navigation">
               <ul class="navigation__list">
@@ -57,7 +57,7 @@
         <div class="container">
           <div class="header-mobile__inner">
             <a class="logo" href="/">
-              <img src="./img/sprite.svg#logo" alt="Логотип" />
+              <img src="./img/svg/logo.svg" alt="Логотип" />
             </a>
             <button
               class="header-mobile__toggle js-toggle"
@@ -92,7 +92,31 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="security">
+        <div class="container">
+          <h2 class="security__title heading-h2">Безопасность</h2>
+          <div class="grid security__inner">
+            <div class="security__img col-6 col-md-2 col-sm-4">
+              <picture>
+                <source media="(max-width: 576px)" srcset="./img/svg/security-img-sm.svg">
+                <source media="(max-width: 768px)" srcset="./img/svg/security-img-md.svg">
+                <img src="./img/svg/security-img.svg" alt="Иконка щита" />
+              </picture>
+            </div>
+            <div class="col-6 col-md-4 col-sm-4">
+              <h2 class="security__inner-title heading-h2">Безопасность</h2>
+              <p class="security__text">
+                Использование Everypay полностью безопасно: подключение к
+                банковскому счету осуществляется в режиме «только для получения
+                выписок», а хранение информации в системе защищено и
+                деперсонализировано.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -135,7 +159,10 @@
                 placeholder="Расскажите о своей компании*"
                 required=""
               ></textarea>
-              <button class="button button--main button--callback" type="submit">
+              <button
+                class="button button--main button--callback"
+                type="submit"
+              >
                 Подключиться
               </button>
             </form>
