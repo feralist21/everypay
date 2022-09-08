@@ -1,0 +1,43 @@
+.button-gradient {
+  border-radius: 44px;
+  background: $white;
+  position: relative;
+  @include transition(box-shadow);
+}
+
+.button-gradient::after {
+  content: '';
+  margin: -1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: $gradient_dark;
+}
+
+
+.button-gradient__item {
+  display: inline-block;
+  height: 46px;
+  border: none;
+  outline: none;
+  padding: 13px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing:  0.369231px;
+  background: $gradient_dark;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.button-gradient:hover {
+  box-shadow: 0px 6px 18px rgba(53, 152, 254, 0.38185);
+  @include transition(box-shadow)
+}

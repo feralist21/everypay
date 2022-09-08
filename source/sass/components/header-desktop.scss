@@ -1,0 +1,65 @@
+.header-desktop {
+  padding: 35px 0 0 0;
+}
+
+.header-desktop__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header-desktop__navigation {
+  max-width: 565px;
+  width: 100%;
+}
+
+.header-desktop__language {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.header-desktop__language-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.96px;
+  color: $black_text;
+  opacity: 0.5;
+}
+
+.header-desktop__language-link--active {
+  background: $gradient_dark;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+}
+
+.header-desktop__language-link--active::after {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 1px;
+  background: linear-gradient(180deg, #1792c7 0%, #00b8f0 100%);
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  z-index: 1;
+}
+
+@media (max-width: $xl) {
+  .header-desktop__navigation {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: $md) {
+  .header-desktop {
+    display: none;
+  }
+}

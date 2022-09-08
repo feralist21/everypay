@@ -1,0 +1,15 @@
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  display: block;
+  width: 131px;
+  height: auto;
+}
+
+@media (max-width: $sm) {
+  .logo img {
+    width: 97px;
+  }
+}
