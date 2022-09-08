@@ -12,7 +12,7 @@
         <div class="container">
           <div class="header-desktop__inner">
             <a class="logo" href="/">
-              <img src="./img/sprite.svg#logo" alt="Логотип">
+              <img src="./img/sprite.svg#logo" alt="Логотип" />
             </a>
             <nav class="header-desktop__navigation navigation">
               <ul class="navigation__list">
@@ -57,13 +57,18 @@
         <div class="container">
           <div class="header-mobile__inner">
             <a class="logo" href="/">
-              <img src="./img/sprite.svg#logo" alt="Логотип">
+              <img src="./img/sprite.svg#logo" alt="Логотип" />
             </a>
-            <button class="header-mobile__toggle js-toggle" type="button"></button>
+            <button
+              class="header-mobile__toggle js-toggle"
+              type="button"
+            ></button>
             <div class="header-mobile__menu-wrap js-menu">
               <ul class="header-mobile__menu">
                 <li class="header-mobile__menu-item">
-                  <a class="header-mobile__menu-link" href="">Как это работает?</a>
+                  <a class="header-mobile__menu-link" href=""
+                    >Как это работает?</a
+                  >
                 </li>
                 <li class="header-mobile__menu-item">
                   <a class="header-mobile__menu-link" href="">Для кого</a>
@@ -81,12 +86,67 @@
                   <a class="header-mobile__menu-link" href="">Контакты</a>
                 </li>
               </ul>
-              <a class="button button--main" href="/">Вход</a>
+              <a class="button button--main button--small" href="/">Вход</a>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <main></main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <h2 class="footer__title heading-h2">Подключиться</h2>
+            <p class="footer__call">
+              Хотите начать пользоваться системой? Напишите нам.
+            </p>
+            <p class="footer__email">
+              email <br />
+              <a href="mailto:hello@everypay.io">hello@everypay.io</a>
+            </p>
+          </div>
+          <div class="footer__right">
+            <form class="footer__form form-callback" action="">
+              <label class="form-callback__label">
+                <input
+                  class="form-callback__input"
+                  type="text"
+                  name="callback-name"
+                  id="callback-name"
+                  placeholder="Ваше имя*"
+                  required=""
+                />
+              </label>
+              <label class="form-callback__label">
+                <input
+                  class="form-callback__input"
+                  type="email"
+                  name="callback-email"
+                  id="callback-email"
+                  placeholder="Email*"
+                  required=""
+                />
+              </label>
+              <textarea
+                class="form-callback__textarea"
+                name="callback-textarea"
+                id="callback-textarea"
+                placeholder="Расскажите о своей компании*"
+                required=""
+              ></textarea>
+              <button class="button button--main button--callback" type="submit">
+                Подключиться
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__post-info">
+          <p class="footer__copy">© 2020, Everypay</p>
+          <a class="footer__policy" href="/">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./js/libs.min.js"></script>
   <script src="./js/app.js"></script>

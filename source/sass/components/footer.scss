@@ -1,0 +1,145 @@
+.footer {
+  padding: 80px 0 115px;
+  background-color: $light_bg;
+  color: $black_text;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 30px;
+}
+
+.footer__inner::before {
+  content: '';
+  display: block;
+  width: 348px;
+  height: 417px;
+  background-image: url('../img/sprite.svg#footer-hash');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 120px;
+  left: -200px;
+  z-index: 1;
+}
+
+.footer__left {
+  max-width: 420px;
+}
+
+.footer__right {
+  padding-top: 77px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.footer__title {
+  margin-bottom: 28px;
+}
+
+.footer__call {
+  margin-bottom: 18px;
+  letter-spacing: 0.71px;
+}
+
+.footer__email {
+  color: rgba(56, 152, 254, 0.3);
+  letter-spacing: 0.71px;
+  line-height: 1.41;
+}
+
+.footer__email a {
+  color: $black_text;
+}
+
+.footer__post-info {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copy {
+  font-size: 8px;
+  font-weight: 500;
+  color: $black_text;
+}
+
+.footer__policy {
+  color: $blue;
+  font-size: 18px;
+  letter-spacing: 0.44px;
+}
+
+@media (max-width: $md) {
+  .footer {
+    padding: 70px 0 37px;
+  }
+
+  .footer__inner::before {
+    display: none;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .footer__left {
+    text-align: center;
+  }
+
+  .footer__right {
+    padding-top: 70px;
+  }
+
+  .footer__post-info {
+    margin-top: 70px;
+  }
+
+  .footer__title {
+    margin-bottom: 40px;
+  }
+
+  .footer__call {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: $sm) {
+  .footer {
+    padding: 60px 0 50px;
+    font-size: 18px;
+  }
+
+  .footer__right {
+    padding-top: 40px;
+  }
+
+  .footer__title {
+    margin-bottom: 20px;
+  }
+
+  .footer__call {
+    margin-bottom: 20px;
+  }
+
+  .footer__post-info {
+    margin-top: 40px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer__policy {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

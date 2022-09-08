@@ -1,27 +1,14 @@
 .heading-h2 {
-  font-size: 50px;
-  line-height: 1;
-  font-family: 'Roboto Flex2', sans-serif;
-  font-weight: 400;
-  font-variation-settings: 'wght' 700, 'wdth' 120, 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
-  font-stretch: extra-condensed;
-}
-
-@media (max-width: $lg) {
-  .heading-h2  {
-    font-size: 40px;
-    line-height: 1.1;
-  }
-}
-
-@media (max-width: $md) {
-  .heading-h2  {
-    font-size: 30px;
-  }
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.98px;
+  color: $black_text;
 }
 
 @media (max-width: $sm) {
-  .heading-h2  {
-    font-size: 20px;
+  .heading-h2 {
+    font-size: 32px;
+    line-height: 1.18;
   }
 }

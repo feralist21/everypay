@@ -5,14 +5,24 @@
   border: none;
   outline: none;
   border-radius: 44px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .button--main {
-  padding: 13px 40px;
   background: $gradient_dark;
   font-weight: 600;
   color: $white;
   @include transition(box-shadow);
+}
+
+.button--small {
+  padding: 13px 40px;
+}
+
+.button--callback {
+  padding: 13px 28px;
 }
 
 .button--main:hover {
