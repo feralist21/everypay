@@ -9,10 +9,17 @@ window.onload = function () {
 function toggleMobileMenu() {
   const toggleBtn = document.querySelector('.js-toggle');
   const mobileMenuWrap = document.querySelector('.js-menu');
+  const body = document.querySelector('.page-body');
 
   if (toggleBtn && mobileMenuWrap) {
     toggleBtn.addEventListener('click', function () {
-      mobileMenuWrap.classList.toggle('header-mobile__menu-wrap--active');
+      if (mobileMenuWrap.classList.contains('header-mobile__menu-wrap--active')) {
+        mobileMenuWrap.classList.remove('header-mobile__menu-wrap--active');
+        body.classList.remove('page-body--hidden');
+      } else {
+        mobileMenuWrap.classList.add('header-mobile__menu-wrap--active');
+        body.classList.add('page-body--hidden');
+      }
     });
   }
 }

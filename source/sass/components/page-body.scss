@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+.page-body--hidden {
+  overflow: hidden;
+}
+
 @media (max-width: $md) {
   .page-body {
     font-size: 16px;
