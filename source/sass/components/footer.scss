@@ -55,6 +55,14 @@
 
 .footer__email a {
   color: $black_text;
+  position: relative;
+  z-index: 10;
+  @include transition(color);
+}
+
+.footer__email a:hover {
+  color: $gray_hover;
+  @include transition(color);
 }
 
 .footer__post-info {
@@ -74,6 +82,12 @@
   color: $blue;
   font-size: 18px;
   letter-spacing: 0.44px;
+  @include transition(color);
+}
+
+.footer__policy:hover {
+  color: $gray_hover;
+  @include transition(color);
 }
 
 @media (max-width: $md) {

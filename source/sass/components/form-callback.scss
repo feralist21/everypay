@@ -1,3 +1,7 @@
+.form-callback {
+  position: relative;
+}
+
 .form-callback__label {
   margin-top: 20px;
   display: block;
@@ -50,6 +54,31 @@
 .form-callback__textarea::placeholder {
   color: #1792C7;
   opacity: 0.6;
+}
+
+.form-callback__done {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $light_bg;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.form-callback__done--active {
+  display: flex;
+}
+
+.form-callback__done p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.44;
 }
 
 @media (max-width: $sm) {

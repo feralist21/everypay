@@ -4,7 +4,8 @@
   "type": "module",
   "description": "",
   "scripts": {
-    "build": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "Alexandr Dementev",
   "license": "ISC",

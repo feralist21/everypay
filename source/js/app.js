@@ -1,8 +1,9 @@
 window.onload = function () {
-  console.log('Готов!');
   toggleMobileMenu();
   introSlider();
   casesSlider();
+  callbackForm();
+  subscribeForm();
 };
 
 function toggleMobileMenu() {
@@ -20,10 +21,6 @@ function introSlider() {
   const swiper = new Swiper('.intro__slider', {
     loop: true,
     autoHeight: true,
-    // autoplay: {
-    //   delay: 5000,
-    // },
-    // pauseOnMouseEnter: true,
   });
 }
 
@@ -38,5 +35,31 @@ function casesSlider() {
       },
     });
   };
+}
 
+function callbackForm() {
+  const callbackForm = document.querySelector('.form-callback');
+
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      const callbackDone = document.querySelector('.form-callback__done');
+      callbackDone.classList.add('form-callback__done--active');
+    });
+  }
+}
+
+function subscribeForm() {
+  const subscribeForm = document.querySelectorAll('.subscribe-form');
+
+  if (subscribeForm) {
+    subscribeForm.forEach(element => {
+      element.addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        const subscribeDone = element.querySelector('.subscribe-form__done');
+        subscribeDone.classList.add('subscribe-form__done--active');
+      });
+    });
+
+  }
 }

@@ -7,7 +7,7 @@ import sourcemap from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'gulp-cssnano';
 import rename from 'gulp-rename';
-import imagemin, {gifsicle, mozjpeg, optipng, svgo} from 'gulp-imagemin';
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import svgSprite from 'gulp-svg-sprite';
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
@@ -27,39 +27,39 @@ export const browsersync = (done) => {
 
 export const fonts = () => {
   return gulp.src('source/fonts/*.{woff,woff2}')
-  .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest('build/fonts'));
 };
 
 export const html = () => {
   return gulp.src('source/*.html')
-  .pipe(plumber())
-  .pipe(gulp.dest('build/'))
-  .pipe(sync.stream());
+    .pipe(plumber())
+    .pipe(gulp.dest('build/'))
+    .pipe(sync.stream());
 };
 
 export const style = () => {
   return gulp.src('source/sass/style.scss')
-  .pipe(plumber())
-  .pipe(sourcemap.init())
-  .pipe(sass.sync().on('error', sass.logError))
-  .pipe(postcss([autoprefixer()]))
-  .pipe(cssnano({
-    discardComments: {
-      removeAll: true
-    }
-  }))
-  .pipe(rename('style.min.css'))
-  .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest('build/css'))
-  .pipe(sync.stream());
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(cssnano({
+      discardComments: {
+        removeAll: true
+      }
+    }))
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(sync.stream());
 };
 
 export const images = () => {
   return gulp.src('source/img/**/*')
     .pipe(imagemin([
-      gifsicle({interlaced: true}),
-      mozjpeg({quality: 75, progressive: true}),
-      optipng({optimizationLevel: 5}),
+      gifsicle({ interlaced: true }),
+      mozjpeg({ quality: 75, progressive: true }),
+      optipng({ optimizationLevel: 5 }),
       svgo()
     ]))
     .pipe(gulp.dest('build/img'))
@@ -68,31 +68,31 @@ export const images = () => {
 
 export const sprite = () => {
   return gulp.src('source/img/svg/*.svg')
-		.pipe(svgSprite({
-			mode: {
-				stack: {
-					sprite: '../sprite.svg'
-				}
-			},
-		}))
-		.pipe(gulp.dest('build/img/'));
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: '../sprite.svg'
+        }
+      },
+    }))
+    .pipe(gulp.dest('build/img/'));
 };
 
 export const jsLibs = () => {
   return gulp.src('source/js/libs/*.js')
-  .pipe(plumber())
-  .pipe(concat('libs.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('build/js/'))
-  .pipe(sync.stream());
+    .pipe(plumber())
+    .pipe(concat('libs.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js/'))
+    .pipe(sync.stream());
 };
 
 export const js = () => {
   return gulp.src('source/js/*.js')
-  .pipe(plumber())
-  .pipe(uglify())
-  .pipe(gulp.dest('build/js/'))
-  .pipe(sync.stream());
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js/'))
+    .pipe(sync.stream());
 };
 
 export const clean = () => {
@@ -116,16 +116,28 @@ export const watch = () => {
 export default gulp.series(
   clean,
   gulp.parallel(
-      html,
-      style,
-      js,
-      jsLibs,
-      images,
-      sprite,
-      fonts
+    html,
+    style,
+    js,
+    jsLibs,
+    images,
+    sprite,
+    fonts
   ),
   gulp.parallel(
-      watch,
-      browsersync
+    watch,
+    browsersync
   )
 );
+
+gulp.task('build', gulp.series(
+  clean,
+  gulp.parallel(
+    html,
+    style,
+    js,
+    jsLibs,
+    images,
+    sprite,
+    fonts
+  )));

@@ -11,4 +11,10 @@
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.96px;
+  @include transition(color);
+}
+
+.navigation__link:hover {
+  color: $gray_hover;
+  @include transition(color);
 }

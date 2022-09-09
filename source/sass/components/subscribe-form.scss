@@ -49,3 +49,33 @@
   right: 0;
   z-index: 1;
 }
+
+.subscribe-form__done {
+  display: none;
+  width: 102%;
+  height: 100%;
+  border-radius: 44px;
+  background-color: $light_bg;
+  outline: 2px solid $light_bg;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  top: 0;
+  left: -2px;
+  z-index: 10;
+}
+
+.subscribe-form__done--active {
+  display: flex;
+}
+
+.subscribe-form__done-img {
+  width: 16px;
+  height: 16px;
+}
+
+.subscribe-form__done-img img {
+  display: block;
+  width: 100%;
+}
