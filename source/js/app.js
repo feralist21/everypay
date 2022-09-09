@@ -1,6 +1,7 @@
 window.onload = function(){
 	console.log('Готов!');
   toggleMobileMenu();
+  introSlider();
 };
 
 function toggleMobileMenu() {
@@ -12,4 +13,15 @@ function toggleMobileMenu() {
       mobileMenuWrap.classList.toggle('header-mobile__menu-wrap--active');
     });
   }
+}
+
+function introSlider() {
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoHeight: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pauseOnMouseEnter: true,
+  });
 }
